@@ -1,10 +1,10 @@
-# Print guide
+# プリントガイド
 
-You can find the `.stl` files under the `print/` directory at the root of this repo. 
+`.stl` ファイルはこのリポジトリのルートにある `print/` ディレクトリに格納されています。
 
-All the parts are printed in standard PLA with 15% infill, except for `foot_bottom_tpu.stl`, which is to be printed in TPU at 40% infill.
+すべての部品は標準的な PLA、インフィル 15% で印刷します。ただし `foot_bottom_tpu.stl` のみ TPU、インフィル 40% で印刷してください。
 
-## Parts to print
+## 印刷する部品
 - foot_top.stl x2
 - foot_side.stl x2
 - foot_bottom_pla.stl x2

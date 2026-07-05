@@ -1,24 +1,24 @@
-# Preparing a robot for simulation in MuJoCo
+# MuJoCo シミュレーション用のロボット準備
 
-## If you designed your robot in OnShape
+## OnShape で設計した場合
 
-### Make sure to design you robot according to onshape-to-robot constraints
+### onshape-to-robot の制約に従って設計されていることを確認
 https://onshape-to-robot.readthedocs.io/en/latest/design.html
 
 
-The urdf will contain frames named `closing_<...>_1` and `closing_<...>_2` that you can use to close the loops in the mjcf file.
+URDF には `closing_<...>_1` と `closing_<...>_2` という名前のフレームが含まれます。これを使って MJCF ファイルでループを閉じることができます。
 
-### Get get robot urdf from onshape
+### OnShape から URDF を取得
 
-Run
+以下を実行:
 
 ```bash
 $ onshape-to-robot robots/bd1/
 ```
 
-#### (Optional) If you have closing loops, follow the instructions for handling them in the documentation of onshape-to-robotn then:
+#### (オプション) 閉ループがある場合は onshape-to-robot のドキュメントに従って処理した後:
 
-In `robot.urdf`, add : 
+`robot.urdf` に以下を追加:
 ```xml
 <robot name="...">
     <mujoco>
@@ -28,20 +28,20 @@ In `robot.urdf`, add :
 </robot>
 ```
 
-# Convert URDF to MJCF (MuJoCo)
+# URDF を MJCF (MuJoCo) に変換
 
-## Get MuJoCo binaries
+## MuJoCo バイナリの取得
 
-Download mujoco binaries somewhere https://github.com/google-deepmind/mujoco/releases
+MuJoCo のバイナリを任意の場所にダウンロード: https://github.com/google-deepmind/mujoco/releases
 
-unpack and run
+展開して以下を実行:
 
 ```bash
 $ ./compile robot.urdf robot.xml
 ```
 
-## In robot.xml, add actuators : 
-Example : 
+## robot.xml にアクチュエータを追加:
+例:
 ```xml
 	<actuator>
 		<position name="left_hip_yaw"    joint="left_hip_yaw"    inheritrange="1"/>
@@ -60,9 +60,9 @@ Example :
 	</actuator>
 ```
 
-## Add a freejoint 
+## freejoint の追加
 
-encapsulate the body in a freejoint
+body を freejoint で囲む:
 ```xml
 <worldbody>
 	<body>
@@ -73,16 +73,16 @@ encapsulate the body in a freejoint
 </worldbody>
 ```
 
-## (Optional) Constrain closing loop
+## (オプション) 閉ループの拘束
 
-Add the following to the mjcf file
+MJCF ファイルに以下を追加:
 ```xml
 <equality>
     <connect body1="closing_<...>_1" body2="closing_<...>_2" anchor="x y z" />
 </equality>
 ```
 
-the x, y, z values can be found in the .urdf 
+x, y, z の値は `.urdf` 内で確認できる:
 
 ```xml
 <joint name="closing_<...>_1_frame" type="fixed">
@@ -91,9 +91,9 @@ the x, y, z values can be found in the .urdf
 </joint>
 ```
 
-## Setup collision groups, damping and friction
-/!\ remove actuatorfrcrange in joints
-Put that inside the <mujoco> bracket
+## 衝突グループ、ダンピング、摩擦の設定
+/!\ ジョイントの actuatorfrcrange を削除すること。
+以下を `<mujoco>` タグ内に配置:
 ```xml
 <mujoco>
   <default>
@@ -106,17 +106,17 @@ Put that inside the <mujoco> bracket
 </mujoco>
 ```
 
-still need to add : 
-- change frames to sites
+まだ必要な作業:
+- frame を site に変更
 
 
-## Visualize 
+## 可視化
 
 ```bash
 $ python3 -m mujoco.viewer --mjcf=<path>/scene.xml
 ```
 
-or 
+または
 
 ```bash
 $ <path_to_mujoco_bin>/bin/simulate <path>/scene.xml
