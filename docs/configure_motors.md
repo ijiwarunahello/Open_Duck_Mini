@@ -1,24 +1,24 @@
-# Configure the motors
+# モーターの設定
 
-> This sould be done independently on each motor *before* builiding the duck.
+> この作業はダックを組み立てる**前**に、各モーターに対して個別に行う必要があります。
 >
-> During the process, the motor will move to its zero position. You can then install the horn while trying to align it the best you can like in the photo below. (Don't worry if it's not perfect, we will compensate for that later)
+> 設定中にモーターがゼロ位置に移動します。その状態でホーンを取り付け、下の写真のようにできるだけ正確に位置合わせしてください。(完璧でなくても後でソフトウェアで補正できます)
 
-![Capture d’écran du 2025-04-25 09-55-34](https://github.com/user-attachments/assets/e3c4aefa-5e0a-4d4e-89f4-82df9bf30e29)
-
-
-Clone and install (`pip install -e .`) the runtime repo on the `v2` branch : `https://github.com/apirrone/Open_Duck_Mini_Runtime`
-
-You can either install it on your own computer or on the raspberry pi for the configuration, as you want. You'll just want a way to power the servos, for example, the battery pack.
+![Capture d'écran du 2025-04-25 09-55-34](https://github.com/user-attachments/assets/e3c4aefa-5e0a-4d4e-89f4-82df9bf30e29)
 
 
-Then for each motor, run the following command : 
+Runtime リポジトリの `v2` ブランチをクローンしてインストール (`pip install -e .`) してください: `https://github.com/apirrone/Open_Duck_Mini_Runtime`
+
+設定作業は PC でも Raspberry Pi でも実行できます。サーボに電力を供給する手段 (バッテリーパック等) があれば大丈夫です。
+
+
+各モーターに対して以下のコマンドを実行します:
 
 ```bash
 python configure_motor.py --id <id>
 ```
 
-The motors ids are : 
+モーター ID の一覧:
 
 ```python
 {

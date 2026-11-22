@@ -1,57 +1,57 @@
-# Assembly guide
+# 組み立てガイド
 
-> Before assembling the duck, you should first [configure your motors](./configure_motors.md)
+> 組み立てを始める前に、まず[モーターの設定](./configure_motors.md)を完了してください。
 
-## Requirements : 
+## 必要なもの:
 
-You will need : 
-- A soldering iron, and basic electronics tools and skills
-- X m3 screws (TODO : add the exact number)
-- Some wire
-- Loctite Threadlocker blue 243
+以下を用意してください:
+- はんだごて、基本的な電子工作工具と技能
+- M3 ネジ各種 (TODO: 正確な本数を追加)
+- ワイヤー
+- Loctite ネジロック剤 青243
 
-> General note : Everytime you screw something in the motors metal against metal, you want to use a little loctite threadlocker. This will prevent the screws from coming loose due to the vibrations during the operation of the robot. It adds a little time to to the build, but you'll be glad you took the time ;)
+> 一般的な注意: モーターに金属ネジを金属に対してねじ込む際は、少量のネジロック剤を使用してください。これはロボット動作中の振動によるネジの緩みを防止します。ビルドに少し時間がかかりますが、やっておいて良かったと思えるはずです ;)
 >
-> Don't use loctite with the plastic screws
+> プラスチックネジにはネジロック剤を使わないでください。
 
-> At any time, you can refer to the CAD here : https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05
+> いつでも CAD を参照できます: https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05
 
-## Steps :
+## 手順:
 
-### Assemble the trunk
+### トランク (胴体) の組み立て
 
-Place the bearings in `trunk_bottom` like so, and insert M3 inserts in these holes. It's also a good time to insert the 4 M3 inserts in the bottom of this part to mount body parts later on.
+`trunk_bottom` にベアリングを以下のように配置し、これらの穴に M3 インサートを挿入します。後でボディパーツを取り付けるために、この部品の底面にある 4 つの M3 インサート穴にも今のうちに挿入しておきましょう。
 
 <img src="https://github.com/user-attachments/assets/9ed8591a-7c96-4410-8d7e-9b7d88c6bd1f" alt="1" width="500px" >
 
-Then assamble `trunk_bottom` and `trunk_top`, and screw them together with 2 `M3x10` screws through these holes
+次に `trunk_bottom` と `trunk_top` を組み合わせ、これらの穴を通して `M3x10` ネジ 2 本で固定します。
 
 <img src="https://github.com/user-attachments/assets/ae36b396-a34a-4691-8e62-fd916cd1f76c" alt="1" width="500px" >
 
-Mount the middle motor like so and screw it with the plastic screws that came with the motors : 
+中央モーターを以下のように取り付け、モーター付属のプラスチックネジで固定します:
 
 <img src="https://github.com/user-attachments/assets/d4a6ba6c-852f-440e-afb7-3b9ca66ad3dc" alt="1" width="500px" >
 
-Insert `roll_motor_bottom` like this 
+`roll_motor_bottom` を以下のように挿入します。
 
 <img src="https://github.com/user-attachments/assets/31c031b7-58b8-4c4c-a3fa-1f14a310c2f2" alt="1" width="500px" >
 
 
-### Assemble the feet
+### 足の組み立て
 
-Both feet are the same. 
+両足とも同じ構造です。
 
-First, assemble `foot_bottom_tpu` with `foot_bottom_pla`. Insert M3 inserts in these holes :
+まず `foot_bottom_tpu` と `foot_bottom_pla` を組み合わせます。以下の穴に M3 インサートを挿入:
 
 <img src="https://github.com/user-attachments/assets/6749a5ba-cea9-4b0a-ac32-f32e130fd057" alt="1" width="500px" >
 
-And screw the two parts together with two `M3x6` screws.
+`M3x6` ネジ 2 本で 2 つの部品を固定します。
 
-Then, insert M3 inserts in these holes in `foot_top` here : 
+次に `foot_top` の以下の穴に M3 インサートを挿入:
 
 <img src="https://github.com/user-attachments/assets/1a77f2f8-56ea-43d2-91c7-78130456c45b" alt="1" width="500px" >
 
-And assemble everything like so. Make sure the driver side of the motor is on the `foot_top` part side : 
+以下のようにすべてを組み立てます。モーターのドライバ側が `foot_top` パーツ側に来るようにしてください:
 
 <table>
   <tr>
@@ -60,9 +60,9 @@ And assemble everything like so. Make sure the driver side of the motor is on th
    </tr> 
 </table>
 
-You can add the foot switches like this too :
+フットスイッチもここで取り付けます:
 
-> You press fit them so that the switch is activated when the foot touches the ground
+> 足が地面に接触した時にスイッチが作動するように圧入します。
 
 <table>
   <tr>
@@ -72,98 +72,98 @@ You can add the foot switches like this too :
 </table>
 
 
-### Assemble the shins
+### 脛 (シン) の組み立て
 
-Insert M3 Inserts in these holes of `leg_spacer` (on both sides. Insert 4 M3 inserts in total) :
+`leg_spacer` の以下の穴に M3 インサートを挿入します (両側。合計 4 つの M3 インサートを挿入):
 
 <img src="https://github.com/user-attachments/assets/41eb01a2-d6f9-43b1-a83e-d14785907425" alt="1" width="500px" >
 
-Then, first plug the motor cable in the foot's motor, and make it go through the `right_sheet` like so 
+次に、まず足のモーターにモーターケーブルを接続し、以下のように `right_sheet` を通します。
 
 <img src="https://github.com/user-attachments/assets/a1432505-6b6c-4765-aea6-0a7a0b8b220b" alt="1" width="500px" >
 
-Then assemble like below:
+以下のように組み立てます:
 
 <img src="https://github.com/user-attachments/assets/54615217-fec9-46dd-8b40-e21a4f527b55" alt="1" width="500px" >
 
-### Assemble the thighs 
+### 腿 (サイ) の組み立て
 
-The thigh is pretty much the same thing, except the `hip_pitch` motor is mounted this way (important for the zero position)
+腿は基本的に脛と同じですが、`hip_pitch` モーターの取り付け方向が異なります (ゼロ位置にとって重要):
 
 <img src="https://github.com/user-attachments/assets/951157a4-26dc-41bb-b97f-18dbbb0c1cd3" alt="1" width="500px" >
 
-### Assemble the hips
+### ヒップの組み立て
 
-Mount `left_roll_to_pitch` or `right_roll_to_pitch`, here the parts are symmetrical so you have to use the right one.
+`left_roll_to_pitch` または `right_roll_to_pitch` を取り付けます。これらは対称パーツなので正しい側のものを使用してください。
 
 <img src="https://github.com/user-attachments/assets/368a85ad-1c58-4db2-bdd0-812334b6c784" alt="1" width="500px" >
 
-Mount `roll_motor_top` to the `hip_yaw` servo (screw from the bottom). Don't mount the servo to the trunk yet.
+`roll_motor_top` を `hip_yaw` サーボに取り付けます (底面からネジ止め)。まだサーボをトランクには取り付けないでください。
 
 
 <img src="https://github.com/user-attachments/assets/768f1664-030c-4432-9071-c52d79d3ef6b" alt="1" width="500px" >
 
-Then mount `hip_roll` like this 
+次に `hip_roll` を以下のように取り付けます。
 
 <img src="https://github.com/user-attachments/assets/e1287f67-320c-42cf-a5dc-84f4c64abb17" alt="1" width="500px" >
 
-And insert the sub assembly like this 
+サブアセンブリを以下のように挿入します。
 
 <img src="https://github.com/user-attachments/assets/dba458ae-e9cb-4e16-a82e-cbe74d2350fa" alt="1" width="500px" >
 
-Screw everything you can (with the plastic screws provided with the servos)
+固定できるところをすべてネジ止めします (サーボ付属のプラスチックネジを使用)。
 
-You can now mount the leg like this :
+脚を以下のように取り付けます:
 
 <img src="https://github.com/user-attachments/assets/a7169791-9f0a-4827-aea7-00ab1d0f6212" alt="1" width="500px" >
 
-And do the same for the other leg :)
+反対側の脚も同様に行います :)
 
-Your duck should now look like this 
+ダックはこのような状態になっているはずです:
 
 <img src="https://github.com/user-attachments/assets/4921b29b-b38b-423d-9da1-1c8f84689e84" alt="1" width="500px" >
 
-### Assemble the neck
+### 首の組み立て
 
-You know the drill
+手順は同じ要領です。
 
 <img src="https://github.com/user-attachments/assets/f96fe44f-a7bc-423e-a925-4aef3e7bf568" alt="1" width="500px" >
 
-### Assemble the head mechanism
+### ヘッド機構の組み立て
 
-First, mount `head_pitch_to_yaw` like this 
+まず `head_pitch_to_yaw` を以下のように取り付けます。
 
 <img src="https://github.com/user-attachments/assets/a4dba395-eb0d-4150-8980-8e14f1173d02" alt="1" width="500px" >
 
-Then, independently mount `head_yaw_to_roll` and `head_roll_mount` to `head_roll dof`
+次に、`head_yaw_to_roll` と `head_roll_mount` を独立して `head_roll dof` に取り付けます。
 
 <img src="https://github.com/user-attachments/assets/4648cd6c-391e-41e4-9617-4ecebfa9215b" alt="1" width="500px" >
 
-(You can insert `head_bot_plate` and `body_middle_top` now too to avoid having to disassamble the head later)
+(後でヘッドを分解せずに済むよう、ここで `head_bot_plate` と `body_middle_top` も挿入しておくとよいです)
 
-Then 
+次に:
 
 <img src="https://github.com/user-attachments/assets/03f3bdae-06c3-4c37-b68f-14587edd6123" alt="1" width="500px" >
 
-Then 
+次に:
 
 <img src="https://github.com/user-attachments/assets/04a219d8-bbaf-4910-b5d3-7ca67bce466c" alt="1" width="500px" >
 
-Your duck should now look like this 
+ダックはこのような状態になっているはずです:
 
 <img src="https://github.com/user-attachments/assets/71545d40-f0f5-411d-a8d5-1cd676a74e75" alt="1" width="500px" >
 
-### Mount the servo driver board
+### サーボドライバーボードの取り付け
 
-TODO take a photo
+TODO: 写真を撮る
 
-### Mount the IMU
+### IMU の取り付け
 
-Like this 
+以下のように:
 
-> It's actually better to mount the IMU with the correct natural orientation, which would be flipped along the X axis compared to the pictures below
-> In the picture below, the IMU is mounted upside down.
-> It probably doesn't really matter a lot if you mount it upside down or not. You can configure how you mounted it later
+> 実際には IMU を正しい自然な向き (下の写真から X 軸方向に反転) で取り付ける方が良いです。
+> 下の写真では IMU が逆さまに取り付けられています。
+> 逆さまに取り付けてもそこまで大きな問題にはなりません。取り付け向きは後でソフトウェアで設定できます。
 
 <table>
   <tr>
@@ -172,9 +172,9 @@ Like this
    </tr> 
 </table>
 
-## Electronics
+## 電子部品
 
-Here is the global electonics schematic for reference 
+全体の電子配線図を参考として示します。
 
 <table>
   <tr>
@@ -183,28 +183,28 @@ Here is the global electonics schematic for reference
    </tr> 
 </table>
 
-Here is how to wire the feet 
+足の配線方法:
 
 ![feet](https://github.com/user-attachments/assets/d3376494-4690-4484-8352-132e6284731a)
 
-Here is the pin mapping on the Pi Zero header
+Pi Zero ヘッダーのピンマッピング:
 
-|       **LEDs**      | **Pi Zero Header Pin** | **Pi Zero Function** |
+|       **LED**       | **Pi Zero ヘッダーピン** | **Pi Zero 機能** |
 |:-------------------:|:----------------------:|:--------------------:|
-|  Left Eye Anode (+) |           16           |        GPIO 23       |
-| Right Eye Anode (+) |           18           |        GPIO 24       |
-| Projector Anode (+) |           22           |        GPIO 25       |
-|  Common Cathode (-) |            6           |          GND         |
+|  左目 アノード (+)  |           16           |        GPIO 23       |
+| 右目 アノード (+)   |           18           |        GPIO 24       |
+| プロジェクタ アノード (+) |           22           |        GPIO 25       |
+|  共通カソード (-)   |            6           |          GND         |
 |                     |                        |                      |
-|     **Antennas**    |                        |                      |
-|       Left PWM      |           32           |     GPIO 12 (PWM)    |
-|      Right PWM      |           33           |     GPIO 13 (PWM)    |
+|     **アンテナ**    |                        |                      |
+|       左 PWM        |           32           |     GPIO 12 (PWM)    |
+|       右 PWM        |           33           |     GPIO 13 (PWM)    |
 |          5V         |            2           |          5V          |
 |         GND         |            6           |          GND         |
 |                     |                        |                      |
-|  **Foot Switches**  |                        |                      |
-|      Left Foot      |           15           |        GPIO 22       |
-|      Right Foot     |           13           |        GPIO 27       |
+|  **フットスイッチ** |                        |                      |
+|       左足          |           15           |        GPIO 22       |
+|       右足          |           13           |        GPIO 27       |
 |         GND         |            9           |          GND         |
 |                     |                        |                      |
 |      **BNO055**     |                        |                      |
@@ -224,9 +224,9 @@ Here is the pin mapping on the Pi Zero header
 |         GND         |            6           |          GND         |
 |         VIN         |            2           |          5V          |
 
-### Battery pack
+### バッテリーパック
 
-> To be safe, make sure your cells are charged to the same voltage before placing them in the holder.
+> 安全のため、セルをホルダーに入れる前に同じ電圧まで充電されていることを確認してください。
 
 <table>
   <tr>
@@ -236,35 +236,35 @@ Here is the pin mapping on the Pi Zero header
 </table>
 
 
-### Head
+### ヘッド
 
-First, insert the M3 inserts in all these holes 
+まず、以下のすべての穴に M3 インサートを挿入します。
 
 ![image](https://github.com/user-attachments/assets/ef4cd513-6b8d-41fa-9cc3-149fc8333d3e)
 
-> TODO add instructions for expression features (camera, antennas, eye leds, projector and speaker)
+> TODO: 表情機能 (カメラ、アンテナ、目の LED、プロジェクタ、スピーカー) の手順を追加
 
-Then insert the bearing, mount the ear motors and the raspberry pi zero 2w.
+次にベアリングを挿入し、耳のモーターと Raspberry Pi Zero 2W を取り付けます。
 
-For reference, the inside of the head looks like this now 
+参考: ヘッドの内部は現在このようになっています。
 
 ![image](https://github.com/user-attachments/assets/91284081-a563-4c02-bb3d-194b3afbc25c)
 
 
-Then assemble the neck with the head like this
+首とヘッドを以下のように接続します。
 
 ![image](https://github.com/user-attachments/assets/96fd5347-bff7-47e9-a7bd-fde17ab1bcd2)
 
 
-## Body
+## ボディ
 
-First screw on `body_middle_bottom`
+まず `body_middle_bottom` をネジ止めします。
 
-![Capture d’écran du 2025-02-09 12-10-00](https://github.com/user-attachments/assets/081d8840-8e88-4938-9d9a-4d97614e6261)
+![Capture d'écran du 2025-02-09 12-10-00](https://github.com/user-attachments/assets/081d8840-8e88-4938-9d9a-4d97614e6261)
 
-Then insert the M3 inserts in all the holes of `body_middle_bottom` and `body_middle_top` on which we'll mount the battery pack and `body_front`.
+次に `body_middle_bottom` と `body_middle_top` のすべての穴に M3 インサートを挿入します。ここにバッテリーパックと `body_front` を取り付けます。
 
-Then mount `body_middle_top`, `body_front` and the battery pack
+`body_middle_top`、`body_front`、バッテリーパックを取り付けます。
 
 <table>
   <tr>
@@ -273,7 +273,7 @@ Then mount `body_middle_top`, `body_front` and the battery pack
    </tr> 
 </table>
 
-Et voila :) 
+完成です :)
 
 <table>
   <tr>
@@ -283,4 +283,4 @@ Et voila :)
 </table>
 
 
-> Now that your duck is fully assembled, you setup the raspberry pi and the runtime software [here](https://github.com/apirrone/Open_Duck_Mini_Runtime)
+> ダックの組み立てが完了したら、Raspberry Pi とランタイムソフトウェアのセットアップを[こちら](https://github.com/apirrone/Open_Duck_Mini_Runtime)で行ってください。

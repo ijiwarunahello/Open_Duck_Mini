@@ -1,18 +1,16 @@
-$\theta_d^f$ : $\theta$ requested in firmware units
+$\theta_d^f$ : ファームウェア単位での要求角度 $\theta$
 
 $\epsilon = \theta_d^f - \theta^f$
 
-### Error in firmware units
+### ファームウェア単位での誤差
 
-> $\lambda$ is the duty cycle, aka the **PWM**
-
-
+> $\lambda$ はデューティ比、すなわち **PWM**
 
 $\epsilon^f = \epsilon \frac{4096}{2\pi}$
 
-> 12 bits
+> 12 bit
 
-### Firmware duty cycle 
+### ファームウェアのデューティ比
 
 
 $\lambda^f = K_p \epsilon^f$
